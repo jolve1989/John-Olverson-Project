@@ -2,21 +2,23 @@ package flowcontrolgroups;
 
 public class DoWhileDemo {
 
+	    
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//print first n natural numbers
-		//input
-		int number = 8;
-		
-		int i =1;
+		int i = 1;
 		do {
+
 			//body of loop
-			System.out.
-			println(i);
+	System.out.print("this is the number: " + i);
 			//expression
 			i++;
-		}while(i <= number);
+			
+			System.out.print("\n");
+		}while(i <= 20);
+		{
+
+		return;
+		}
 	}
-
-}
-
+	}

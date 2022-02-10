@@ -1,6 +1,10 @@
 package classandobjects;
 
-public class Room {
+//import classandobjects.RoomDemo;
+
+
+
+public class Room implements Comparable {
 	//public int length;
 	int length;
 	int breadth;
@@ -9,7 +13,8 @@ public class Room {
 	static int height;
 	int roomNo;
 	String roomColor;
-	private Object floorArea;
+//	private Object floorArea;
+
 	
 	static {
 		height = 50; // correct place to initialize static variables
@@ -57,18 +62,28 @@ public int calculateFloorArea() {
 		int wallArea = 2 * ((length * height) + (breadth * height));
 		return wallArea * paintRate;
 	 
-	
-	
- }
+	}
  
  static int computeDoubleHeight() {
 	 //System.out.println(length);
 	 return height * 2;
 	 
  }
-// @Override
-// public String toString();{
-//	 return "[length="
-// }
+@Override
+ public String toString(){
+	 return "[length=" + length + ",breadth=" + breadth + "]";
+ }
+
+@Override
+public int compareTo(Object o) {
+	// TODO Auto-generated method stub
+	int currentFA = length * breadth;
+	Room incoming = (Room) o;
+//	Object incoming;
+	int incomingFA = incoming.length * incoming.breadth;
+
+	return currentFA - incomingFA;
+	
+}
 
 }
