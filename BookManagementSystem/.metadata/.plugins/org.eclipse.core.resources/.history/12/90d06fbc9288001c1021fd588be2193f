@@ -1,4 +1,5 @@
 package presention;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -38,7 +39,7 @@ import service.BookServiceImpl;
 					case 1:
 						BookPojo newBook = new BookPojo();
 						System.out.println("Enter Book Title :");
-						newBook.setBookTitle(scan.nextLine());
+						newBook.setBooktitle(scan.nextLine());
 						System.out.println("Enter Book Author :");
 						newBook.setBookAuthor(scan.nextLine());
 						System.out.println("Enter Book Genre :");
@@ -47,7 +48,7 @@ import service.BookServiceImpl;
 						newBook.setBookCost(scan.nextInt());
 						
 						BookPojo addedBook = bookService.addBook(newBook);
-						System.out.println("Book Added Successfully!!\nYour new Book ID is " + addedBook.getBookId());
+						System.out.println("Book Added Successfully!!\nYour new Book ID is " + addedBook.getBookid());
 						
 						break;
 					case 2:
@@ -59,8 +60,8 @@ import service.BookServiceImpl;
 							break;
 						}
 						System.out.println("***************************************");
-						System.out.println("Book ID : " +  fetchedOldBook.getBookId());
-						System.out.println("Book Title : " +  fetchedOldBook.getBookTitle());
+						System.out.println("Book ID : " +  fetchedOldBook.getBookid());
+						System.out.println("Book Title : " +  fetchedOldBook.getBooktitle());
 						System.out.println("Book Author : " +  fetchedOldBook.getBookAuthor());
 						System.out.println("Book Genre : " +  fetchedOldBook.getBookGenre());
 						System.out.println("Book Cost : " +  fetchedOldBook.getBookCost());
@@ -79,8 +80,8 @@ import service.BookServiceImpl;
 							break;
 						}
 						System.out.println("***************************************");
-						System.out.println("Book ID : " +  fetchedBook.getBookId());
-						System.out.println("Book Title : " +  fetchedBook.getBookTitle());
+						System.out.println("Book ID : " +  fetchedBook.getBookid());
+						System.out.println("Book Title : " +  fetchedBook.getBooktitle());
 						System.out.println("Book Author : " +  fetchedBook.getBookAuthor());
 						System.out.println("Book Genre : " +  fetchedBook.getBookGenre());
 						System.out.println("Book Cost : " +  fetchedBook.getBookCost());
@@ -102,7 +103,7 @@ import service.BookServiceImpl;
 						System.out.println("**************************************************************************************");
 						while(itr.hasNext()) {
 							BookPojo book = itr.next();
-							System.out.println(book.getBookId() + "\t" + book.getBookTitle() + "\t" + book.getBookAuthor() + "\t" + book.getBookGenre() + "\t" + book.getBookCost());
+							System.out.println(book.getBookid() + "\t" + book.getBooktitle() + "\t" + book.getBookAuthor() + "\t" + book.getBookGenre() + "\t" + book.getBookCost());
 						}
 						System.out.println("**************************************************************************************");
 						break;
@@ -126,4 +127,5 @@ import service.BookServiceImpl;
 		}
 
 	}
+
 

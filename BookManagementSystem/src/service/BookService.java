@@ -22,4 +22,3 @@ public interface BookService {
 	BookPojo fetchABook(int bookId);
 
 }
-

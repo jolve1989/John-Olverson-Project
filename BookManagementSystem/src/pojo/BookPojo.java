@@ -8,6 +8,7 @@ public class BookPojo {
 	private int bookCost;
 	private String bookImageUrl;
 	
+	
 	public BookPojo() {
 		super();
 	}
